@@ -1,0 +1,51 @@
+<html>
+	<head></head>
+	<body>
+		<header>
+			</header>
+	
+		<label> Nombre: </label>
+		<input type="text" id="Nombre">
+		<br>
+		<label> Apellido Paterno: </label>
+		<input type="text" id="AP">
+		<br>
+		<label> Apellido Materno: </label>
+		<input type="text" id="AM">
+		<br>
+		<label> Fecha de Nacimiento: </label>
+		<input type="text" id="Fecha">
+		<br>
+		<label>Genero:</label>
+		<select id="sele">
+			<option value="MASCULINO">Masculino</option>
+			<option value="FEMENINO">Femenino</option>
+		</select>
+		<br>
+		<input type="button" value="Imprimir" onclick="imprimir()">
+		<div class="impresion">
+			<label id="lbl-rfc"></label>
+		</div>
+	
+		<script>
+
+			function imprimir(){
+				var rfc = ""
+				var str = document.getElementById("AP").value;
+					rfc = rfc + str.substring(0,2);
+					str = document.getElementById("AM").value;
+					rfc = rfc + str.substring(0,1);
+					str = document.getElementById("Nombre").value;
+					rfc = rfc + str.substring(0,1);
+					str = document.getElementById("Fecha").value;
+					rfc = rfc + str.substring(2,4);
+					str = document.getElementById("sele").value;
+					rfc = rfc + str.substring(0,2);
+
+					var nom = rfc;
+					document.getElementById("lbl-rfc").innerHTML = rfc;
+				}
+		</script>
+
+	</body>
+</html>
