@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>REGISTRO</h1>
+        <form action="Registro" method="POST">
+            <label>Usuario</label>
+            <input type="text" name="usuario"/>
+            <br/>
+            <br/>
+            <label>Contraseña</label>
+            <input type="password" name="contraseña"/>
+            <br/>
+            <br/>
+            <label>Email</label>
+            <input type="text" name="email"/>
+            <br/>
+            <br/>
+            <label>Mes Nacimiento</label>
+            <select name="mes">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option selected>Septiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+            </select>
+            <br/>
+            <br/>
+            <label>Sexo</label>
+            <br/>
+            <br/>
+            <input type="radio" value="M" name="genero"/>
+            <label>Masculino</label>
+            <br/>
+            <br/>
+            <input type="radio" value="F" name="genero"/>
+            <label>Femenino</label>
+            <br/>
+            <br/>
+            <label>Soy mayor de edad</label>
+            <input type="checkbox" name="check"/>
+            <br/>
+            <br/>
+            <label>Acerca de mi</label>
+            <textarea name="descripcion" rows="5"></textarea>
+            <br/>
+            <br/>
+            <input type="reset" value="Borrar" onclick="limpiar()"/>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </body>
+</html>
